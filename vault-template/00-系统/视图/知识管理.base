@@ -1,0 +1,71 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'management_schema == "obs-v1"'
+    - 'sensitivity == "private"'
+    - 'publish == false'
+    - or:
+        - and:
+            - 'file.folder == "07-收件箱/资料"'
+            - 'type == "reference-note"'
+        - and:
+            - 'file.folder == "05-复盘/知识卡"'
+            - 'type == "knowledge-card"'
+properties:
+  file.name:
+    displayName: 笔记
+  note.status:
+    displayName: 处理状态
+  note.evidence_status:
+    displayName: 证据状态
+  note.source_url:
+    displayName: 公开来源
+  note.source_of_truth:
+    displayName: 权威记录
+  note.review_after:
+    displayName: 复查提示
+views:
+  - type: table
+    name: 资料索引
+    filters:
+      and:
+        - 'type == "reference-note"'
+    order:
+      - file.name
+      - note.status
+      - note.evidence_status
+      - note.source_url
+  - type: table
+    name: 待分流
+    filters:
+      and:
+        - 'type == "reference-note"'
+        - or:
+            - 'status == "captured"'
+            - 'status == "triaged"'
+    order:
+      - file.name
+      - note.status
+      - note.evidence_status
+  - type: table
+    name: 有效知识
+    filters:
+      and:
+        - 'type == "knowledge-card"'
+        - 'status == "active"'
+    order:
+      - file.name
+      - note.evidence_status
+      - note.source_of_truth
+      - note.review_after
+  - type: table
+    name: 待复核
+    filters:
+      or:
+        - 'evidence_status == "unverified"'
+        - 'evidence_status == "contested"'
+        - 'status == "needs-review"'
+    order:
+      - file.name
+      - note.evidence_status
+      - note.review_after

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="350" viewBox="0 0 1120 350" role="img" aria-label="从项目证据到可追溯长期记忆，写入由并发保护与恢复核验支撑">
+  <rect width="1120" height="350" rx="18" fill="#121b26"/>
+  <g font-family="system-ui, sans-serif" fill="#ecf1f5">
+    <text x="40" y="52" font-size="24" font-weight="700">Obsidian Memory Workflow</text>
+    <text x="40" y="83" font-size="15" fill="#a8bacb">资料有来源 · 状态只有一个出处 · 备份能够验证</text>
+    <g fill="#203247" stroke="#4b7693" stroke-width="1.4">
+      <rect x="40" y="120" width="180" height="66" rx="10"/>
+      <rect x="255" y="120" width="180" height="66" rx="10"/>
+      <rect x="470" y="120" width="180" height="66" rx="10"/>
+      <rect x="685" y="120" width="180" height="66" rx="10"/>
+      <rect x="900" y="120" width="180" height="66" rx="10"/>
+    </g>
+    <g font-size="17" text-anchor="middle">
+      <text x="130" y="160">项目源与证据</text><text x="345" y="160">唯一当前入口</text>
+      <text x="560" y="160">每日真实增量</text><text x="775" y="160">周／月复盘</text><text x="990" y="160">可复用知识</text>
+    </g>
+    <g font-size="26" fill="#74c8bd" text-anchor="middle"><text x="237" y="161">→</text><text x="452" y="161">→</text><text x="667" y="161">→</text><text x="882" y="161">→</text></g>
+    <rect x="40" y="220" width="1040" height="60" rx="10" fill="#192b31" stroke="#4b8e84"/>
+    <text x="560" y="257" text-anchor="middle" font-size="17" fill="#9bdfd1">作业串行 + 写前哈希 → 非破坏性镜像 → SHA-256 → 隔离恢复</text>
+    <text x="40" y="319" font-size="14" fill="#a8bacb">@羊羊Leo · MIT 开源 · AI 可选 · 私人知识库不随项目公开</text>
+  </g>
+</svg>

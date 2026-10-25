@@ -1,0 +1,19 @@
+{
+  "example_only": true,
+  "operation": "daily_knowledge_maintenance",
+  "cycle": "EXAMPLE_NOT_A_REAL_RUN",
+  "timezone": "Asia/Shanghai",
+  "actual_triggered_at_utc": null,
+  "started_at_utc": null,
+  "scan_until_utc": null,
+  "completed_at_utc": null,
+  "coverage_status": "NOT_ASSESSED",
+  "write_status": "DRAFT",
+  "mirror_status": "NOT_CHECKED",
+  "restore_status": "NOT_CHECKED",
+  "source_files": null,
+  "mirror_files": null,
+  "source_missing_count": null,
+  "sha256_difference_count": null,
+  "checkpoint_advanced": false
+}

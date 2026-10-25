@@ -1,0 +1,15 @@
+{
+  "example_only": true,
+  "automatically_loaded": false,
+  "vault_root": "YOUR_PRIVATE_VAULT_OUTSIDE_THIS_REPOSITORY",
+  "control_root": "YOUR_PRIVATE_CONTROL_DIRECTORY",
+  "mirror_root": "YOUR_PRIVATE_MIRROR_DIRECTORY",
+  "timezone": "Asia/Shanghai",
+  "schedule_examples": {
+    "daily": "22:00 every day",
+    "weekly": "22:30 Sunday",
+    "monthly": "23:15 on day 1, reviewing the previous calendar month"
+  },
+  "models_configured": false,
+  "scheduled_tasks_created": false
+}
