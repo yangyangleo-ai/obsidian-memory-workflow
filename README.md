@@ -25,7 +25,7 @@
 
 ## 五分钟开始：不需要 AI，也不需要社区插件
 
-1. [下载 ZIP](https://github.com/solissky0-debug/obsidian-memory-workflow/archive/refs/heads/main.zip)，解压到一个**新目录**。不要覆盖已有知识库。
+1. [下载 ZIP](https://github.com/yangyangleo-ai/obsidian-memory-workflow/archive/refs/heads/main.zip)，解压到一个**新目录**。不要覆盖已有知识库。
 2. 用 Obsidian 的“打开本地仓库”打开 `vault-template` 文件夹。
 3. 从 `首页.md` 进入示例项目，查看“当前结论 → 来源 → 下一步”的关系。
 4. 把虚构项目换成自己的项目入口；新资料使用 `06-模板/资料摘录模板.md`。
@@ -85,7 +85,7 @@ python scripts/check_public_content.py
 ## 教学、贡献与反馈
 
 - 准备拍教学？从 [教学演示提纲](docs/teaching-outline.md) 开始，用虚构示例演示完整闭环，不录真实客户／账户／聊天。
-- 分享链接：[github.com/solissky0-debug/obsidian-memory-workflow](https://github.com/solissky0-debug/obsidian-memory-workflow)。教学可以固定 [v0.1.0](https://github.com/solissky0-debug/obsidian-memory-workflow/releases/tag/v0.1.0)，避免后续文件变化。
+- 分享链接：[github.com/yangyangleo-ai/obsidian-memory-workflow](https://github.com/yangyangleo-ai/obsidian-memory-workflow)。教学可以固定 [v0.1.0](https://github.com/yangyangleo-ai/obsidian-memory-workflow/releases/tag/v0.1.0)，避免后续文件变化。
 - 反馈与提交改进前，请读 [贡献说明](CONTRIBUTING.md) 和 [安全说明](SECURITY.md)。不要把私人笔记或完整运行回执贴到 Issue。
 
 本方案借鉴了 kepano、Web Clipper、Tasks 和 Obsidian Git 的部分理念，但不要求安装它们。出处与边界见 [致谢与借鉴](docs/credits.md)。
