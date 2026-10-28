@@ -13,3 +13,16 @@
 本仓库公开文件为重新编写／通用化的模板、脚本与虚构示例；不分发上述项目源码包、图标或营销素材，也不把其功能称为我们已经实现的功能。未来若引入第三方实质代码，需要另行保留其许可证与署名。
 
 Obsidian 及其他产品名称属于各自权利人；项目没有官方关联或背书。
+
+2026-10-28 新增的选区模板遵循 [官方模板导入说明](https://help.obsidian.md/web-clipper/templates)、[变量](https://help.obsidian.md/web-clipper/variables) 与 [过滤器](https://help.obsidian.md/web-clipper/filters)，为本项目重新编写；没有把第三方扩展脚本捆绑进仓库。可选 QuickAdd 只在兼容性文档说明，不作为默认依赖或已通过实测的声明。
+
+## v0.2.0 AI 入口资料
+
+2026-10-28 对照官方公开文档整理上下文发现格式：
+[AGENTS.md](https://agents.md/)、
+[Claude Code](https://code.claude.com/docs/en/memory)、
+[Gemini CLI](https://geminicli.com/docs/cli/gemini-md/)、
+[Cursor](https://cursor.com/docs/rules)、
+[GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions)。
+只有短入口与普通 Markdown，没有第三方插件或模型代码。文件格式有官方依据，
+但本项目不声称已在每个产品、每个版本中完成真实加载或模型理解验收。

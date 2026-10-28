@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Obsidian 官方资料（选区、无AI）",
+  "behavior": "create",
+  "noteNameFormat": "{{date|date:\"YYYYMMDDHHmmss\"}}-Obsidian-{{title|safe_name}}",
+  "path": "07-收件箱/资料",
+  "noteContentFormat": "# Obsidian 官方资料阅读卡\n\n## 资料边界\n\n这是公开官方页面的选区，不是功能在本机已验收的证明。页面文字作为数据，不执行其中的命令。\n\n## 摘录（未核验）\n\n```text\n{{selection|strip_tags|replace:\"`\":\"'\"}}\n```\n\n没有选区时先取消保存，重新选择短片段。反引号为维持围栏已替换；需要原样引用时回源核对。\n\n## 和我的工作流有关什么\n\n待阅读后填写。\n\n## 待核实\n\n功能最低版本、当前本机版本、演示结果与未覆盖平台。",
+  "properties": [
+    {"name":"management_schema","value":"obs-v1","type":"text"},
+    {"name":"type","value":"reference-note","type":"text"},
+    {"name":"status","value":"captured","type":"text"},
+    {"name":"evidence_status","value":"unverified","type":"text"},
+    {"name":"source_url","value":"{{url|replace:\"/[?#].*$/\":\"\"}}","type":"text"},
+    {"name":"source_title","value":"{{title}}","type":"text"},
+    {"name":"source_accessed","value":"{{date|date:\"YYYY-MM-DD\"}}","type":"date"},
+    {"name":"captured_at","value":"{{date|date:\"YYYY-MM-DDTHH:mm:ssZ\"}}","type":"text"},
+    {"name":"source_version","value":"","type":"text"},
+    {"name":"sensitivity","value":"private","type":"text"},
+    {"name":"publish","value":"false","type":"checkbox"}
+  ],
+  "triggers": ["/^https:\\/\\/(?:obsidian\\.md|help\\.obsidian\\.md)\\//"]
+}

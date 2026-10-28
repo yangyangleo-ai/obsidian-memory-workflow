@@ -10,6 +10,23 @@
 
 开源的是方法、模板与辅助代码，**不是作者的私人知识库**。所有示例项目和记录均为虚构；本仓库不含聊天记录、账户配置、运行记忆或客户资料。
 
+## 新用户：一键准备自己的工作区
+
+**[下载 v0.2.0](https://github.com/yangyangleo-ai/obsidian-memory-workflow/releases/tag/v0.2.0)** → 解压 → Windows 双击 **`install.cmd`**。
+
+它会在当前用户目录新建 `AI-Memory-Workspace`，复制公开模板、跨 AI 入口和练习，
+逐文件读回校验，不覆盖已有知识库。Windows 安装本身不需要 Python、Node、付费插件或管理员权限。
+然后按新目录 `START_HERE.md`，在 Obsidian 打开 `vault-template`，在 AI 编程工具打开工作区根目录。
+
+macOS / Linux 有 Python 3.11+ 时可运行 `python3 scripts/install_workspace.py`；
+这些平台的原生实测范围单独标注，不宣称全平台均已通过。
+详见 [安装与重复运行](docs/installation.md) 和 [跨 AI 使用](docs/ai-compatibility.md)。
+
+**一键完成文件准备，不等于所有 AI 自动接通。** 不安装 Obsidian 软件，不登录账号、不接模型、
+不上传笔记、不启用日周月自动化。不同工具可通过 AGENTS.md、CLAUDE.md、GEMINI.md、
+Cursor/Copilot 项目指令读同一份 `AI_START_HERE.md`；聊天网页则手动提供已审阅的交接资料。
+用同一组五道题验证一次交接，不用宣传语替代理解验收。
+
 ![从项目证据到长期记忆的流程](assets/workflow.svg)
 
 ## 它解决什么问题
@@ -32,6 +49,18 @@
 5. 先跑通一次手动整理，再考虑 AI 与定时任务。带 `{{...}}` 的字段是占位符，不会由本仓库自动填充。
 
 原生 Bases 是可选增强：启用后能看到资料索引、待分流、有效知识、待复核四个表。未启用时直接用 Markdown 链接，不影响手动使用。本项目只做静态语法／范围检查，**不把它当作 Obsidian 界面验收**。详见 [快速开始](docs/quickstart.md)。
+
+## 先走通三个小练习
+
+v0.2.0 包含以下三条练习，固定 v0.1.0 仍保留；不是所有 AI 自动接通，也不会上传资料、创建模型账号或安装插件。
+
+| 想先解决什么 | 直接开始 | 会留下什么 |
+| --- | --- | --- |
+| 换 AI 时不重讲项目 | [跨 AI 交接演练](docs/cross-ai-handover.md) | 只含三份选定笔记的只读交接包、来源哈希和五项理解检查 |
+| 网页看过以后找不到 | [网页资料捕获](docs/web-capture.md) | 官方 Clipper 可导入模板，或无扩展的摘录卡；来源与未知保留 |
+| 从选题到发布混成一团 | [创作者完整案例](docs/creator-case.md) | 全虚构视频项目：采用决定、素材许可、唯一下一步与内容链路 |
+
+[版本与可选插件](docs/compatibility.md) 单独说明兼容性；最低版本符合、结构测试通过、实际界面通过和某个 AI 理解通过分别记录。无需社区插件也能完成上述练习。
 
 ## 三种使用方式
 
@@ -62,6 +91,8 @@ docs/                 上手、设计、安全、备份、教学提纲与常见�
 examples/             无真实数据的配置清单和回执示例
 ```
 
+`scripts/handover.py` 只在本机导出指定 Markdown 并检查源变化；`scripts/capture_source.py` 默认只预览用户提供的公开摘录，加 `--apply` 才新建资料卡。两者不联网、不调用模型、不修改既有项目状态；真实库写入仍须独立持有 guard。
+
 ### 辅助脚本的范围
 
 Python 工具仅使用标准库，要求 Python 3.11+。并发 guard 以 Windows + PowerShell 7 为支持基线。**备份／写入工具本身不替你取得两个 guard**；写真实库时必须由持有作业门及写锁的协作流程调用。guard 也不能阻止不遵守约定的编辑器，因此写前还要比较哈希。
@@ -75,6 +106,11 @@ python scripts/check_public_content.py
 真实路径、锁会话、镜像和恢复步骤见 [安全操作指南](docs/operations.md)。不要跳过文档，直接把自动化提示词接入生产知识库。
 
 首版已经在 Windows 本地运行 40 项 Python 测试与 32 项 guard 断言。线上 CI **尚未启用**；仓库提供 [可选 CI 配置与启用说明](docs/ci-setup.md)，需要维护者自行确认工作流写入权限。未运行的 Linux／远端测试不宣称通过。
+
+v0.2.0 在 Windows 本机通过 81 项 Python 测试（含 Windows PowerShell 5.1 安装测试）、
+32 项 guard 断言及 94 个公开文件检查；完整分发源经 `install.cmd`、Windows PowerShell 5.1、
+PowerShell 7 和 Python 四种入口安装、自检与重复运行演练。未在 macOS / Linux 原生或多家 AI
+账号上实测，不把文件校验写成模型理解、安全审计或所有环境通过。
 
 ## 免费与授权
 

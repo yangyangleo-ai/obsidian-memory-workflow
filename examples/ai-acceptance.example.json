@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "status": "NOT_TESTED",
+  "tool": null,
+  "tool_version_or_model": null,
+  "checked_at": null,
+  "source_packet_sha256": null,
+  "checks": {
+    "progress_not_published": null,
+    "adopted_not_superseded": null,
+    "unknowns_preserved": null,
+    "single_next_action": null,
+    "scope_and_sources": null
+  },
+  "answer_reference": null,
+  "human_reviewed": false,
+  "scope": "One fictional handover exercise only; never all-AI certification"
+}
